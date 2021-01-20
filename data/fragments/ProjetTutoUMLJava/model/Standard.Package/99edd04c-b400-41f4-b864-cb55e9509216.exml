@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="net" version="4">
+  <OBJECT>
+    <ID name="net" mc="Standard.Package" uid="99edd04c-b400-41f4-b864-cb55e9509216"/>
+    <PID name="java" mc="Standard.Package" uid="a2cc4730-c46f-417d-bd15-030776a27d2f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[net]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Socket" mc="Standard.Class" uid="45584ee3-81bc-4d66-a361-1917c75e48ca"/>
+        <COMPID name="ServerSocket" mc="Standard.Class" uid="044e32b0-11f7-4cc5-a77d-2683a136cb7e"/>
+        <COMPID name="SocketException" mc="Standard.Class" uid="0a245ba2-7fcc-4376-b3d1-1b7ec5505f01"/>
+        <COMPID name="UnknownHostException" mc="Standard.Class" uid="eac5ca56-7735-4659-a904-a324b3e6d5a8"/>
+        <COMPID name="InetAddress" mc="Standard.Class" uid="1aff1e3e-0e4e-4fdf-a582-4e4371bb58f5"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="d036a722-ef2b-4999-9596-3dd83c390c22"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="Infrastructure.TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

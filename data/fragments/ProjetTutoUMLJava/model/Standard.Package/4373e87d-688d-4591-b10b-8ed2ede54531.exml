@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="personnage" version="4">
+  <OBJECT>
+    <ID name="personnage" mc="Standard.Package" uid="4373e87d-688d-4591-b10b-8ed2ede54531"/>
+    <PID name="projettutoumljava" mc="Standard.Package" uid="1693feda-c3a7-401c-9227-4953f3276543"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[personnage]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Monstre" mc="Standard.Class" uid="4d4bef4a-402c-41b7-889a-445b86af707c"/>
+        <COMPID name="Personnage" mc="Standard.Class" uid="2d005592-5637-4607-9366-65e0291244a8"/>
+        <COMPID name="PersonnageNonJoueur" mc="Standard.Class" uid="7db4797e-0589-4420-883c-5f141e9ebb06"/>
+        <COMPID name="PersonnageJoueur" mc="Standard.Class" uid="4e3a145c-a940-4c3f-9a4e-d02834ecf19b"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

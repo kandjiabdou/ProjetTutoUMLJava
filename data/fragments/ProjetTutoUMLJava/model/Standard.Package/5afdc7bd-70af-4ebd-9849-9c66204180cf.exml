@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="awt" version="4">
+  <OBJECT>
+    <ID name="awt" mc="Standard.Package" uid="5afdc7bd-70af-4ebd-9849-9c66204180cf"/>
+    <PID name="java" mc="Standard.Package" uid="a2cc4730-c46f-417d-bd15-030776a27d2f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[awt]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="event" mc="Standard.Package" uid="e146cf90-aad1-4d66-a499-7d7fb9f5bf5f"/>
+        <COMPID name="GridLayout" mc="Standard.Class" uid="fd8fd980-4838-411e-951a-dc4cd9affd30"/>
+        <COMPID name="Color" mc="Standard.Class" uid="786cb0ca-96aa-48ac-acc9-1fad0a77ac20"/>
+        <COMPID name="Toolkit" mc="Standard.Class" uid="33287c79-7dab-40a6-a808-b258c3f40a61"/>
+        <COMPID name="Dimension" mc="Standard.Class" uid="44686331-d3a2-48fc-adaf-6b28a3371e7c"/>
+        <COMPID name="GridBagLayout" mc="Standard.Class" uid="1faabc72-f480-4468-bdf2-3bacb917343f"/>
+        <COMPID name="GridBagConstraints" mc="Standard.Class" uid="37d2a20f-a923-491c-b7fe-4942db197d64"/>
+        <COMPID name="BorderLayout" mc="Standard.Class" uid="2a7374c3-5d2d-4968-829c-8ba33cc254d0"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="2742cb10-1367-4cf1-b2b5-d3e23e227353"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="Infrastructure.TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

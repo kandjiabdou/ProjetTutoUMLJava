@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="LecteurConnection" version="4">
+  <OBJECT>
+    <ID name="LecteurConnection" mc="Standard.Class" uid="cfaad340-0b05-4536-a685-be64be971e4a"/>
+    <PID name="Client" mc="Standard.Class" uid="5293a55e-00b6-43f0-93ff-fdbf645860d2"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[LecteurConnection]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="run" mc="Standard.Operation" uid="d4d65dd7-ef6f-480b-9eb3-85834bc5e935"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[run]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="301d5d25-1348-43d1-bf67-ff40eafee849"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[try {    
+    connexion = new Socket(host, port);
+    reader = new BufferedReader(new InputStreamReader(connexion.getInputStream()));
+    writer = new PrintWriter(connexion.getOutputStream(), true);
+    fenetreConnection();
+    initEcouteursConnection();
+    // au début on recoit un message de bienvenu en 4 flush du serveur
+    String reponse;
+    while(true) {
+        //TOUJOURS UTILISER flush() POUR ENVOYER RÉELLEMENT DES INFOS AU SERVEUR
+        reponse = reader.readLine();
+        @SuppressWarnings("resource")
+        Scanner sc = new Scanner(reponse);
+        sc.useDelimiter("/");
+        //System.out.println(reponse);
+    }    
+ }catch (IOException e) {
+       System.out.println("jkjgikhkjhkjkj");
+ }
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Realized">
+        <OBJECT>
+          <ID name="" mc="Standard.InterfaceRealization" uid="c76b72d5-625b-443c-a9da-e4043bf7a3dd"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Implemented">
+              <ID name="Runnable" mc="Standard.Interface" uid="4e3e5733-3384-4d2a-a465-cf1945883e5f"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,372 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FenJeu" version="4">
+  <OBJECT>
+    <ID name="FenJeu" mc="Standard.Class" uid="31906807-e034-42af-aa45-201990829b1a"/>
+    <PID name="carte" mc="Standard.Package" uid="3c5f646d-f84b-448e-ab78-ebc4cec2e9fd"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[FenJeu]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="serialVersionUID" mc="Standard.Attribute" uid="caaaf4c8-55dc-44d3-ae59-e57d295aab0d"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[1L]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[serialVersionUID]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="Standard.DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="db41e849-9255-4f63-ac0c-8e453b5610bd"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="" mc="Standard.Generalization" uid="f01d8526-8761-4f27-852f-86f846b4e098"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="JFrame" mc="Standard.Class" uid="b2f7bb86-4fa6-4038-991c-e910faa294ea"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedPackageImport">
+        <OBJECT>
+          <ID name="" mc="Standard.PackageImport" uid="e8265890-f828-4261-8f07-d5234680332f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedPackage">
+              <ID name="swing" mc="Standard.Package" uid="00c9e283-a4b6-4956-acd2-5521df6d45ca"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="2d80f277-0892-4ee6-ba18-200d1587ca73"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[//
+//    private Carte carte;
+//
+//    private JLabel labelADR;
+//    private JLabel labelFRC;
+//    private JLabel labelRST;
+//    private JLabel labelPA;
+//
+//    private JLabel labelADR1;
+//    private JLabel labelFRC1;
+//    private JLabel labelRST1;
+//
+//    private JLabel labelMainDroite;
+//    private JLabel labelMainGauche;
+//
+//    private JButton haut;
+//    private JButton bas;
+//    private JButton droite;
+//    private JButton gauche;
+//
+//    private JButton ramasser;
+//    private JButton deposer;
+//    private JButton attaquer;
+//
+//
+//
+//    //private JLabel[][] boutonCase;
+//
+//    private JTextArea caseCarte;
+//
+//    private Timer timerPA;
+//
+//    static final int BOUTON_HAUT = 1;
+//    static final int BOUTON_BAS = 2;
+//    static final int BOUTON_DROITE = 3;
+//    static final int BOUTON_GAUCHE = 4;
+//
+//    static final int BOUTON_RAMASSER = 5;
+//    static final int BOUTON_DEPOSER = 6;
+//    static final int BOUTON_ATTAQUER = 7;
+//
+//    public FenJeu() {
+//        super("Jeu MMORPG");
+//        this.carte=new Carte();
+//        this.initComposants();
+//        this.initEcouteurs();
+//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        this.centrer(0.6);
+//        this.setVisible(true);
+//        timerPA = new Timer();
+//        timerPA.schedule(new TimerTask() {
+//                        public void run() {
+//                            labelPA.setText("Point d'action : "+String.valueOf(carte.joueur1.getPointAction()));
+//                        }
+//        },1, 5000);
+//
+//        Timer tm = new Timer();
+//        tm.schedule(new TimerTask() {
+//                        public void run() {
+//                            carte.monstre.deplacer();
+//                            caseCarte.setText(carte.afficherFen());
+//                        }
+//        },1, 1000);
+//    }
+//    private void initComposants() {
+//        JPanel panPrincipal = new JPanel();
+//        panPrincipal.setLayout(new BorderLayout());
+//        this.add(panPrincipal);
+//
+//        panPrincipal.add(panInfoPNJ(),BorderLayout.SOUTH);
+//        panPrincipal.add(panInfoJoueur(),BorderLayout.NORTH);
+//        panPrincipal.add(panCarte(),BorderLayout.CENTER);
+//        panPrincipal.add(panAction(),BorderLayout.EAST);
+//        panPrincipal.add(panFichier(),BorderLayout.WEST);
+//    }
+//    public void initEcouteurs() {
+//        this.haut.addActionListener(new EcouteurBoutons(BOUTON_HAUT));
+//        this.bas.addActionListener(new EcouteurBoutons(BOUTON_BAS));
+//        this.droite.addActionListener(new EcouteurBoutons(BOUTON_DROITE));
+//        this.gauche.addActionListener(new EcouteurBoutons(BOUTON_GAUCHE));
+//        this.ramasser.addActionListener(new EcouteurBoutons(BOUTON_RAMASSER));
+//        this.deposer.addActionListener(new EcouteurBoutons(BOUTON_DEPOSER));
+//        this.attaquer.addActionListener(new EcouteurBoutons(BOUTON_ATTAQUER));
+//
+////        this.addKeyListener(new EcouteurClavier(KeyEvent.VK_KP_UP));
+////        this.addKeyListener(new EcouteurClavier(KeyEvent.VK_KP_DOWN));
+////        this.addKeyListener(new EcouteurClavier(KeyEvent.VK_KP_LEFT));
+////        this.addKeyListener(new EcouteurClavier(KeyEvent.VK_RIGHT));
+//    }
+//    public JPanel panInfoJoueur() {
+//
+//        JPanel pInfo=new JPanel(new GridLayout(0,1));
+//
+//        JPanel pI=new JPanel();
+//        JLabel lI=new JLabel("Information du joueur");
+//        pI.add(lI);
+//        pInfo.add(pI);
+//
+//        JPanel pI2=new JPanel(new GridLayout(0,3));
+//        labelADR=new JLabel(this.carte.joueur1.infoADR());
+//        pI2.add(labelADR);
+//        labelFRC=new JLabel(this.carte.joueur1.infoFRC());
+//        pI2.add(labelFRC);
+//        labelRST=new JLabel(this.carte.joueur1.infoRST());
+//        pI2.add(labelRST);
+//        labelPA=new JLabel("Point d'action : "+this.carte.joueur1.getPointAction());
+//        pI2.add(labelPA);
+//
+//        labelMainDroite=new JLabel("Main Droite : "+this.carte.joueur1.getMainDroite());
+//        pI2.add(labelMainDroite);
+//        labelMainGauche=new JLabel("Main Gauche : "+this.carte.joueur1.getMainGauche());
+//        pI2.add(labelMainGauche);
+//
+//        pInfo.add(pI2);
+//        pInfo.setBorder(BorderFactory.createEtchedBorder());
+//        pInfo.setBackground(Color.GREEN);
+//        return pInfo;
+//    }
+//
+//    public JPanel panInfoPNJ() {
+//        JPanel pInfo=new JPanel(new GridLayout(0,3));
+//        labelADR1=new JLabel(this.carte.pnj.infoADR());
+//        pInfo.add(labelADR1);
+//        labelFRC1=new JLabel(this.carte.pnj.infoFRC());
+//        pInfo.add(labelFRC1);
+//        labelRST1=new JLabel(this.carte.pnj.infoRST());
+//        pInfo.add(labelRST1);
+//
+//        pInfo.setBorder(BorderFactory.createEtchedBorder());
+//        return pInfo;
+//    }
+//
+//    public JPanel panCarte() {
+//        JPanel pCarte = new JPanel(new BorderLayout());
+//
+//        pCarte.setMinimumSize(new Dimension(300,500));
+//        pCarte.setMaximumSize(new Dimension(300,500));
+//
+//        caseCarte=new JTextArea(carte.afficherFen());
+//
+//        pCarte.add(caseCarte);
+//        pCarte.setBorder(BorderFactory.createEtchedBorder());
+//        return pCarte;
+//
+//    }
+//
+//    public JPanel panFichier() {
+//        JPanel pan = new JPanel();
+////
+//
+////
+//        pan.setBorder(BorderFactory.createEtchedBorder());
+//        return pan;
+//    }
+//    public JPanel panAction() {
+//        JPanel pan = new JPanel(new GridLayout(0,1));
+//
+//        JPanel panB = new JPanel(new GridBagLayout());
+//        GridBagConstraints c = new GridBagConstraints();
+//        c.fill = GridBagConstraints.HORIZONTAL;
+//        haut=new JButton("▲");
+//        c.fill = GridBagConstraints.PAGE_START;
+//        c.gridx = 1;
+//        c.gridy = 0;
+//        panB.add(haut, c);
+//        bas = new JButton("▼");
+//        c.fill = GridBagConstraints.PAGE_END;
+//        c.gridx = 1;
+//        c.gridy = 2;
+//        panB.add(bas, c);
+//        droite= new JButton("►");
+//        c.fill = GridBagConstraints.LINE_END;
+//        c.gridx = 2;
+//        c.gridy = 1;
+//        panB.add(droite, c);
+//        gauche = new JButton("◄");
+//        c.fill = GridBagConstraints.LINE_START;
+//        c.gridx = 0;
+//        c.gridy = 1;
+//
+//        panB.add(gauche, c);
+//        panB.setBorder(BorderFactory.createEtchedBorder());
+//
+//
+//        ramasser=new JButton("Ramasser");
+//        pan.add(ramasser);
+//        deposer=new JButton("Deposer");
+//        pan.add(deposer);
+//
+//        attaquer=new JButton("Attaquer");
+//        pan.add(attaquer);
+//        pan.add(panB);
+//
+//
+//        pan.setBorder(BorderFactory.createEtchedBorder());
+//        return pan;
+//    }
+//
+//    public void centrer(double d) {
+//        Toolkit tk = Toolkit.getDefaultToolkit();
+//        Dimension dim = tk.getScreenSize();
+//        int largeur = (int) (d * dim.width);
+//        int longueur = (int) (d * dim.height);
+//        this.setBounds((dim.width - largeur) / 2, (dim.height - longueur) / 2, largeur, longueur);
+//    }
+//    public static void main(String[] args) {
+//        new FenJeu();
+//    }
+//
+//    class EcouteurBoutons implements ActionListener {
+//
+//        private int sens;
+//
+//        public EcouteurBoutons(int sens) {
+//            this.sens = sens;
+//        }
+//
+//        public void actionPerformed(ActionEvent e) {
+////            switch (sens) {
+////            case BOUTON_HAUT: {
+////                System.out.println("Bouton HAUT " + BOUTON_HAUT);
+////                carte.joueur1.deplacerFEN(BOUTON_HAUT);
+////                break;
+////            }
+////            case BOUTON_BAS: {
+////                System.out.println("Bouton BAS " + BOUTON_BAS);
+////                carte.joueur1.deplacerFEN(BOUTON_BAS);
+////                break;
+////            }
+////            case BOUTON_DROITE:{
+////                System.out.println("Bouton DROITE " + BOUTON_DROITE);
+////                carte.joueur1.deplacerFEN(BOUTON_DROITE);
+////                break;
+////            }case BOUTON_GAUCHE:{
+////                System.out.println("Bouton GAUCHE " + BOUTON_GAUCHE);
+////                carte.joueur1.deplacerFEN(BOUTON_GAUCHE);
+////                break;
+////                }
+////            case BOUTON_RAMASSER:{
+////                System.out.println("Bouton RAMASSER " + BOUTON_RAMASSER);
+////                carte.joueur1.ramasser();
+////                labelMainDroite.setText("Main Droite : "+carte.joueur1.getMainDroite());
+////                break;
+////                }
+////            case BOUTON_DEPOSER:{
+////                System.out.println("Bouton DEPOSER " + BOUTON_DEPOSER);
+////                carte.joueur1.deposer();
+////                labelMainDroite.setText("Main Droite : "+carte.joueur1.getMainDroite());
+////                break;
+////                }
+////            case BOUTON_ATTAQUER:{
+////                System.out.println("Bouton ATTAQUE " + BOUTON_ATTAQUER);
+////                carte.joueur1.attaquer(1);
+////                labelFRC1.setText(carte.pnj.infoFRC());
+////                break;
+////                }
+////            default:
+////                break;
+////            }
+//            caseCarte.setText(carte.afficherFen());
+//            labelPA.setText("Point d'action : "+carte.joueur1.getPointAction());
+//        }
+//
+//    }]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="JavaMembers" mc="Infrastructure.NoteType" uid="003800a8-0000-015b-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

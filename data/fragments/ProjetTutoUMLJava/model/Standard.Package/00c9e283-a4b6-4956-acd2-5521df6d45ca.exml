@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="swing" version="4">
+  <OBJECT>
+    <ID name="swing" mc="Standard.Package" uid="00c9e283-a4b6-4956-acd2-5521df6d45ca"/>
+    <PID name="javax" mc="Standard.Package" uid="c9c1bdd4-cf13-46d8-bd08-1f7d54b25538"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[swing]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="JFrame" mc="Standard.Class" uid="b2f7bb86-4fa6-4038-991c-e910faa294ea"/>
+        <COMPID name="JTextArea" mc="Standard.Class" uid="8be960d4-4972-427b-b19c-e144684df426"/>
+        <COMPID name="JTextField" mc="Standard.Class" uid="e2d3dfc2-63ed-4140-9575-10244815538d"/>
+        <COMPID name="JButton" mc="Standard.Class" uid="a0d8593b-d0f8-449e-b37d-8a1b911fadf3"/>
+        <COMPID name="BorderFactory" mc="Standard.Class" uid="093afe37-cea4-45f4-a105-052f0fe2a8b6"/>
+        <COMPID name="JLabel" mc="Standard.Class" uid="e47f2718-b712-47cf-9e1c-910e969acdeb"/>
+        <COMPID name="JPanel" mc="Standard.Class" uid="cbb08321-fef8-481d-9a8b-075a868b614c"/>
+        <COMPID name="JScrollPane" mc="Standard.Class" uid="f2271f20-7313-4f87-8ab5-e6038444fdeb"/>
+        <COMPID name="JTabbedPane" mc="Standard.Class" uid="f5ba1296-2a6b-4610-b3a7-f9ba51cd7c35"/>
+        <COMPID name="JComboBox" mc="Standard.Class" uid="77338ba6-c4ba-4d9b-ac18-7fb1f8a58e77"/>
+        <OBJECT>
+          <ID name="GroupLayout" mc="Standard.Enumeration" uid="6ab937f5-41c7-4ef4-96b1-7a4ccc68ab9d"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[GroupLayout]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedElement">
+              <OBJECT>
+                <ID name="Alignment" mc="Standard.Enumeration" uid="e393bdef-9b56-4d4e-8152-b3c984596d3c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsElementary">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="IsLeaf">false</ATT>
+                  <ATT name="IsRoot">false</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="Name"><![CDATA[Alignment]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="c2591a61-83b6-4881-9d4e-5277fe2667ac"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaExtern" mc="Infrastructure.TagType" uid="3ac7ce9b-423f-4ef0-9c40-8dcc9ddedcc6"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="c67e1c43-0907-41ab-9dff-fef1c9d357e0"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaExtern" mc="Infrastructure.TagType" uid="3ac7ce9b-423f-4ef0-9c40-8dcc9ddedcc6"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="JPasswordField" mc="Standard.Class" uid="d44d6728-1ef8-41f2-a545-7a7327f414c3"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="d6f29660-d59f-4158-a097-06fb2902fbd5"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="Infrastructure.TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

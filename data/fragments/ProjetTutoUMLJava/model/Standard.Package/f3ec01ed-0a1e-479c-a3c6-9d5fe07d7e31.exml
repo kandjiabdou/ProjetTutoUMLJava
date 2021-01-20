@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="objet" version="4">
+  <OBJECT>
+    <ID name="objet" mc="Standard.Package" uid="f3ec01ed-0a1e-479c-a3c6-9d5fe07d7e31"/>
+    <PID name="projettutoumljava" mc="Standard.Package" uid="1693feda-c3a7-401c-9227-4953f3276543"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[objet]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Epee" mc="Standard.Class" uid="c1e605cc-95db-4d75-a75c-2bbafb002a7c"/>
+        <COMPID name="Class" mc="Standard.Class" uid="e7b1c474-2bc0-4193-83ea-e93e6f22eb2e"/>
+        <COMPID name="Objet" mc="Standard.Class" uid="85b94315-4e29-4c1f-aa53-953a819c098e"/>
+        <COMPID name="Outil" mc="Standard.Class" uid="fe1e44f4-29f6-4676-b5fc-78009fce7047"/>
+        <COMPID name="Protege" mc="Standard.Class" uid="85196e83-8994-4317-8ed2-a67b93b98020"/>
+        <COMPID name="PotionDeSoin" mc="Standard.Class" uid="0c94537b-85fd-4d38-99d4-0976180015cf"/>
+        <COMPID name="PotionExplosion" mc="Standard.Class" uid="68043b3c-862e-4158-a02e-0e8b13d5f780"/>
+        <COMPID name="Casque" mc="Standard.Class" uid="17588c43-d309-4899-923e-e8e32e8e5ef2"/>
+        <COMPID name="Vetement" mc="Standard.Class" uid="4f916128-ed12-4e0c-90d2-b54bdf781fc4"/>
+        <COMPID name="Bouclier" mc="Standard.Class" uid="c5c006e6-b021-4e31-b08c-5bddf84de0a2"/>
+        <COMPID name="Arme" mc="Standard.Class" uid="2ef539f9-6b64-4105-9ed8-75e6b6dfdb1b"/>
+        <COMPID name="Potion" mc="Standard.Class" uid="4424dd62-5a17-4875-ada2-fa228dc52fea"/>
+        <COMPID name="Sac" mc="Standard.Class" uid="9770d5cc-4068-430a-b529-d26aa24e6432"/>
+        <COMPID name="Protegeable" mc="Standard.Interface" uid="b9549276-61a1-4fba-9368-1737e3a62faa"/>
+        <COMPID name="Arc" mc="Standard.Class" uid="fd84e7f5-bdb5-4a01-aeff-3a63c6093f13"/>
+        <COMPID name="Armure" mc="Standard.Class" uid="6082a919-8c20-4703-8f92-739ef01d089b"/>
+        <COMPID name="Chaussure" mc="Standard.Class" uid="08bc2501-19c9-4255-a896-74990a0c729d"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,7 @@
+#Mon Jun 08 08:24:36 CEST 2020
+org.modelio.module.propertytab.JavaDesigner\ v3.9.00\ GModule\ @file\:///C\:/Users/Abdou%20KANDJI/.modelio/4.0/modules/JavaDesigner_3.9.00/JavaDesigner_3.9.00.jmdac\ runtime\ module_.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts
+org.modelio.module.propertytab.JavaDesigner\ v3.9.00\ GModule\ @file\:///C\:/Users/Abdou%20KANDJI/.modelio/4.0/modules/JavaDesigner_3.9.00/JavaDesigner_3.9.00.jmdac\ runtime\ module_.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.diagram.editor.OpenedDiagrams1='Diagramme de cas d'utilisation' {d0eb6644-c88c-4b20-89a4-777350ce3e74} Standard.UseCaseDiagram
+org.modelio.module.propertytab.JavaDesigner\ v3.9.00\ GModule\ @file\:///C\:/Users/Abdou%20KANDJI/.modelio/4.0/modules/JavaDesigner_3.9.00/JavaDesigner_3.9.00.jmdac\ runtime\ module_.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.module.propertytab.JavaDesigner\ v3.9.00\ GModule\ @file\:///C\:/Users/Abdou%20KANDJI/.modelio/4.0/modules/JavaDesigner_3.9.00/JavaDesigner_3.9.00.jmdac\ runtime\ module_.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.diagram.editor.OpenedDiagrams0='Diagramme de classe du jeu' {4263a974-ffb4-44ce-ab76-d2cdc681a982} Standard.ClassDiagram

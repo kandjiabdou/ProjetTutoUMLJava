@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ProjetTutoUMLJava" version="4">
+  <OBJECT>
+    <ID name="ProjetTutoUMLJava" mc="Standard.Project" uid="3d29608b-d68a-4efb-b5a4-61cc82968370"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[ProjetTutoUMLJava]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="projettutoumljava" mc="Standard.Package" uid="1693feda-c3a7-401c-9227-4953f3276543"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="ProjetTutoUMLJava" mc="Infrastructure.DiagramSet" uid="1a5f5a06-4f52-48c1-812d-87573c2b5ec9"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

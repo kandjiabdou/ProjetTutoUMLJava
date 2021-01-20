@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Lecteur" version="4">
+  <OBJECT>
+    <ID name="Lecteur" mc="Standard.Class" uid="a2993d24-f723-4dfd-9ebb-47110c00bfd5"/>
+    <PID name="Client" mc="Standard.Class" uid="5293a55e-00b6-43f0-93ff-fdbf645860d2"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Lecteur]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="run" mc="Standard.Operation" uid="08672104-0ef2-49ec-9f1a-895c19ff54ec"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[run]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="69ae44af-2f63-4012-9837-6b8f7733a8c4"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[try {        
+    connexion = new Socket(host, port);
+    reader = new BufferedReader(new InputStreamReader(connexion.getInputStream()));
+    writer = new PrintWriter(connexion.getOutputStream(), true);
+    
+    fenetreJeu();
+    initEcouteursJEU();
+    // au début on recoit un message de bienvenu en 4 flush du serveur
+    String reponse;
+    for(int i=0; i<4;i++) {
+        
+        reponse = reader.readLine();
+        //System.out.println(reponse);
+        conversation.setText(conversation.getText()+reponse+"\n");
+    }
+    reponse = reader.readLine();
+    caseCarte.setText(reponse);
+    for(int i=0; i<21;i++) {
+        reponse = reader.readLine();
+        caseCarte.setText(caseCarte.getText()+"\n"+reponse);
+    }
+    //On attend la réponse
+    
+    while(true) {
+        //TOUJOURS UTILISER flush() POUR ENVOYER RÉELLEMENT DES INFOS AU SERVEUR
+        reponse = reader.readLine();
+        //System.out.println("la réponse du server est : "+reponse);
+        if(reponse.length()>0) {
+            //System.out.println(reponse);
+            try {
+                @SuppressWarnings("resource")
+                Scanner sc = new Scanner(reponse);
+                sc.useDelimiter("/");
+                String r = sc.next();
+                switch(r) {
+                    case MESSAGE_CONVERSATION :{
+                        conversation.setText(conversation.getText()+"\n\tJoueur2 : "+sc.next());
+                        break;
+                    }
+                    case MESSAGE_CARTE :{
+                        caseCarte.setText(sc.next());
+                        for(int i=0;i<22;i++) {
+                            caseCarte.setText(caseCarte.getText()+"\n"+reader.readLine());
+                        }
+                        break;
+                    }
+                    case MESSAGE_ETAT :{
+                        labelPA.setText("Point d'action : "+sc.next());
+                        labelVie.setText("Niveau de Vie : "+sc.next());
+                        labelExp.setText("Experiance : "+sc.next());
+                        break;
+                    }
+                    case MESSAGE_MAIN :{
+                        labelMainDroite.setText(sc.next());
+                        labelMainGauche.setText(sc.next());
+                        break;
+                    }
+                    case MESSAGE_ARMURE :{
+                        labelCasque.setText(sc.next());
+                        labelVetement.setText(sc.next());
+                        labelChaussure.setText(sc.next());
+                        break;
+                    }
+                    case MESSAGE_CARACTERISTIQUE :{
+                        labelFRC.setText(sc.next());
+                        labelRST.setText(sc.next());
+                        labelADR.setText(sc.next());
+                        break;
+                    }
+                    case MESSAGE_CAPACITE :{
+                        labelInitiative.setText(sc.next());
+                        labelAttaque.setText(sc.next());
+                        labelEsquive.setText(sc.next());
+                        labelDefense.setText(sc.next());
+                        labelDegat.setText(sc.next());
+                        break;
+                    }
+                    case MESSAGE_SAC :{
+                        int nb= Integer.valueOf(sc.next());
+                        itemSacString= new String[nb];
+                        for(int i=0;i<nb;i++) {
+                            itemSacString[i]=sc.next();
+                        }
+                        System.out.println(itemSacString);
+                        
+                        itemSac.setModel(new DefaultComboBoxModel<String>(itemSacString));
+                        break;
+                    }
+                }
+            }catch(NullPointerException e) {
+                e.printStackTrace();
+                //System.out.println(reponse);
+            }
+        }
+    }    
+}catch (ConnectException e) {
+       System.out.println("Le serveur n'est pas ouvert !!");
+       String message="Le serveur n'est pas ouvert !!";
+       JOptionPane.showMessageDialog(new JFrame(), message, "Serveur",JOptionPane.ERROR_MESSAGE);
+  } catch (IOException e) {
+       System.out.println("IO exp");
+  }
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Realized">
+        <OBJECT>
+          <ID name="" mc="Standard.InterfaceRealization" uid="ba3f1890-b7aa-49d9-9d30-52a3a04c5282"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Implemented">
+              <ID name="Runnable" mc="Standard.Interface" uid="4e3e5733-3384-4d2a-a465-cf1945883e5f"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

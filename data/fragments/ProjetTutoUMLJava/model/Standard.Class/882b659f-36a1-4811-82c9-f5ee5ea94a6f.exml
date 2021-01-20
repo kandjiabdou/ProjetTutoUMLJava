@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="EcouteurBoutons" version="4">
+  <OBJECT>
+    <ID name="EcouteurBoutons" mc="Standard.Class" uid="882b659f-36a1-4811-82c9-f5ee5ea94a6f"/>
+    <PID name="Client" mc="Standard.Class" uid="5293a55e-00b6-43f0-93ff-fdbf645860d2"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">PackageVisibility</ATT>
+      <ATT name="Name"><![CDATA[EcouteurBoutons]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="EcouteurBoutons" mc="Standard.Operation" uid="a40ee0a5-3a30-4181-bec5-a7057b6c7eff"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[EcouteurBoutons]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="sens" mc="Standard.Parameter" uid="13090906-00d0-4810-8b4e-5b76c8b1a883"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[sens]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Infrastructure.Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="98024015-db1e-4d93-bbe3-d322080f098a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[this.sens = sens;]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="actionPerformed" mc="Standard.Operation" uid="66209c6f-45ed-4db1-ab52-8f9abc8308e8"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[actionPerformed]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="e" mc="Standard.Parameter" uid="45008a0d-9481-4453-8c63-fa569ded63e1"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[e]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="ActionEvent" mc="Standard.Class" uid="570fa754-bfcb-48ae-b92e-dea230a562c4"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="4c1dbbd7-fadf-4231-a931-1f575252d898"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[switch (sens) {
+case BOUTON_REJOINDRE: {
+    System.out.println("Bouton rejoindre " + BOUTON_REJOINDRE);
+    Thread t = new Thread(moi);
+    t.start();
+    break;
+}
+case BOUTON_CONNECTER: {
+    System.out.println("Bouton connection " + BOUTON_CONNECTER);
+    String id=idConnect.getText();
+    String mdp=mdpConnect.getText();
+    if (id!=null && id.length()>4 && mdp.length()>5) {
+        System.out.println("Bouton connection " + BOUTON_CONNECTER);
+        writer.println(MESSAGE_CONNECTION+"/"+id+"/"+mdp);
+        writer.flush();
+    }
+    break;
+}
+case BOUTON_INSCRIRE: {
+    System.out.println("Bouton inscription " + BOUTON_INSCRIRE);
+    writer.println(MESSAGE_INSCRIPTION);
+    writer.flush();
+    break;
+}
+case BOUTON_HAUT: {
+writer.println(MESSAGE_DEPLACEMENT+"/"+HAUT);
+writer.flush();
+break;
+}
+case BOUTON_BAS: {
+    writer.println(MESSAGE_DEPLACEMENT+"/"+BAS);
+    writer.flush();
+    break;
+}
+case BOUTON_DROITE:{
+    writer.println(MESSAGE_DEPLACEMENT+"/"+DROITE);
+    writer.flush();
+    break;
+}case BOUTON_GAUCHE:{
+    writer.println(MESSAGE_DEPLACEMENT+"/"+GAUCHE);
+    writer.flush();
+    break;
+    }
+case BOUTON_RAMASSER:{
+    writer.println(MESSAGE_ACTION+"/"+RAMASSER);
+    writer.flush();
+    break;
+    }
+
+case BOUTON_DEPOSER:{
+    writer.println(MESSAGE_ACTION+"/"+DEPOSER);
+    writer.flush();
+    break;
+    }
+case BOUTON_EQUIPER:{
+    System.out.println("Bouton DEPOSER " + BOUTON_EQUIPER);
+    int nb= itemSac.getSelectedIndex();
+    System.out.println("message à envoyer : "+nb);
+    writer.println(MESSAGE_ACTION+"/"+EQUIPER+"/"+nb);
+    writer.flush();
+    break;
+    }
+case BOUTON_ECHANGER: {
+    System.out.println("Bouton BAS " + BOUTON_ECHANGER);
+    writer.println(MESSAGE_ACTION+"/"+ECHANGER);
+    writer.flush();
+    break;
+}
+case BOUTON_ATTAQUER_D:{
+    writer.println(MESSAGE_ACTION+"/"+ATTAQUER+"/1");
+    writer.flush();
+    break;
+    }
+case BOUTON_UTILISER_D:{
+    writer.println(MESSAGE_ACTION+"/"+UTILISER+"/1");
+    writer.flush();
+    break;
+    }
+case BOUTON_UTILISER_G:{
+    writer.println(MESSAGE_ACTION+"/"+UTILISER+"/2");
+    writer.flush();
+    break;
+    }
+case BOUTON_ATTAQUER_G:{
+    writer.println(MESSAGE_ACTION+"/"+ATTAQUER+"/2");
+    writer.flush();
+    break;
+    }
+case BOUTON_ENVOYER :{
+    String msg = envoyerTexte.getText();
+    if (msg!=null && msg.length()!=0) {
+        writer.println(MESSAGE_CONVERSATION+"/"+msg);
+        writer.flush();
+        // on modifie le texte de la conversation
+        conversation.setText(conversation.getText()+"\nMoi : "+msg);
+    }
+    // le texte écrit dans la zone est effacé pour permettre d'envoyer un autre message
+    envoyerTexte.setText("");
+    break;
+    }
+default:
+    break;
+}
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="sens" mc="Standard.Attribute" uid="137244be-9767-4046-85fb-5da4327c1853"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[sens]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="18ade00a-59cf-400b-a669-83e565bdafbd"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Realized">
+        <OBJECT>
+          <ID name="" mc="Standard.InterfaceRealization" uid="678e60d5-a0c1-4669-b73e-cea2c97d0a9c"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Implemented">
+              <ID name="ActionListener" mc="Standard.Interface" uid="e941f816-fa61-44b2-b535-0dd7550dedbe"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

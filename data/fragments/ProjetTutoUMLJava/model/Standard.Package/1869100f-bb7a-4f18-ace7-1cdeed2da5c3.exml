@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="io" version="4">
+  <OBJECT>
+    <ID name="io" mc="Standard.Package" uid="1869100f-bb7a-4f18-ace7-1cdeed2da5c3"/>
+    <PID name="java" mc="Standard.Package" uid="a2cc4730-c46f-417d-bd15-030776a27d2f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[io]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="IOException" mc="Standard.Class" uid="cd61e3fb-fd43-4824-b5b2-32aa14918bb9"/>
+        <COMPID name="BufferedReader" mc="Standard.Class" uid="9d536fd6-0680-4d97-bc3c-378876020382"/>
+        <COMPID name="FileReader" mc="Standard.Class" uid="e929e4ba-0b6a-4f5f-b9cb-4ad4e42f4114"/>
+        <COMPID name="PrintWriter" mc="Standard.Class" uid="bd9ba5d8-8adb-444d-9e27-86a40e24933a"/>
+        <COMPID name="InputStreamReader" mc="Standard.Class" uid="ea2da7cb-9b49-485b-b5f7-8753e9841538"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="dc043e53-8d8e-4ca5-a45a-f58251c00aae"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="Infrastructure.TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
